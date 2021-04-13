@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.main-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.close {
+    opacity: 0.5;
+    color: white;
+    font-size: 40px;
+    right: 88px;
+    position: absolute;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.close:hover {
+    opacity: 0.8;
+}
+.lib-con {
+    padding: 15px;
+    margin: 20px;
+    width: 800px;
+    background-color: rgb(192, 201, 215);
+    box-shadow: 0 0 25px -12px rgba(0,0,0,0.75);
+    display: flex;
+    flex-wrap: wrap;
+
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+.img {
+    width: 29%;
+    height: 260px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin: 15px;
+    transition: 0.2s ease-in-out;
+}
+.img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.main-image-con {
+    height: 660px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+.main-img {
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    grid-column: 2/9;
+    grid-row: 2/9;
+    box-shadow: 0 0 40px -12px rgba(0,0,0,0.75);
+}
+.arrow-sub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 80px;
+    transition: 0.4s ease-in-out;
+}
+.arrow {
+    padding: 15px;
+    transition: 0.2s ease-in-out;
+}
+.arrow:hover {
+    cursor: pointer;
+    color: #e7e7e7;
+}
+.arrow-left {
+    z-index: 1;
+    grid-column: 1/2;
+    grid-row: 4/7;
+}
+.arrow-right {
+    z-index: 1;
+    grid-column: 9/10;
+    grid-row: 4/7;
+}
+
+/* JavaScript UTILITIES, KEEP AT THE BOTTOM */
+
+.d-none {
+    display: none;
+}
+.z-index-1 {
+    z-index: 1;
+}
+.fade {
+    filter: brightness(0.4);
+    transition: 0.4s ease-in-out;
+}
+.arrow-js-r {
+    transform: translateX(7px);
+}
+.arrow-js-l {
+    transform: translateX(-7px);
+}
+
+/*  MEDIA QUERIES  */
+
+@media screen and (max-width: 850px) {
+    .lib-con {
+        padding: 15px;
+        margin: 10px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .main-image-con {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 770px) {
+    .img {
+        width: 100%;
+        height: 350px;
+    }
+    .main-image-con {
+        flex-direction: column;
+        width: 90%;
+        max-height: 100%;
+        justify-content: flex-start;
+    }
+    .main-img {
+        height: 500px;
+    }
+    .lib-con {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: auto;
+        max-height: 50%;
+        padding: 5px;
+    }
+    .main-con {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .arrow-left {
+        transform: rotate(90deg);
+    }
+    .arrow-right {
+        transform: rotate(90deg);
+    }
+    .close {
+        right: 2%;
+    }
+}
